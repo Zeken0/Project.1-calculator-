@@ -46,11 +46,12 @@ const currentoperandtextelement = document.querySelectorAll(
 );
 
 
-const calculator = new Calculator(previousoperandtextelement, currentoperandtextelement)
+const calculator = new calculator(previousoperandtextelement, currentoperandtextelement)
 
-numberbuttons.forEach(buttons => [
+numberbuttons.forEach(buttons => {
     button.addeventlistener('click', () => {
-        Calculator.appendnumber(button.innertext)
-        Calculator.updatedisplay()
+        calculator.appendnumber(button.innertext)
+        calculator.updatedisplay()
     })
-]) 
+}) 
+
